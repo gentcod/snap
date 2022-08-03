@@ -1,0 +1,25 @@
+/*MEDIA QUERY STYLE GUIDE
+
+0 - 600PX: Phone
+600 - 1440px: Big Desktop
+
+1em = 16px: 
+*/
+
+@mixin respond($device) {
+   @if $device == phone {
+      @media (max-width: 37.5em) {@content}; //375pxx
+   }
+
+   @if $device == desktop {
+      @media (min-width: 90em) {@content}; //1440px
+   }
+}
+
+@mixin clearfix {
+   &::after {
+      content: "";
+      display: table;
+      clear: both;
+   }
+}

@@ -1,0 +1,118 @@
+/*MEDIA QUERY STYLE GUIDE
+
+0 - 600PX: Phone
+600 - 1440px: Big Desktop
+
+1em = 16px: 
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 90em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 0 5rem; }
+
+body {
+  font-size: 16px;
+  color: #222;
+  font-family: 'Lato', sans-serif; }
+
+.section__btn {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  font-weight: 700; }
+
+.section__container {
+  padding: 10rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10rem;
+  justify-content: center; }
+
+.section__introduction {
+  margin-top: 10rem;
+  position: relative;
+  padding: 0 5rem; }
+
+.section__header {
+  margin: 5rem 0;
+  line-height: 7rem;
+  width: 85%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 8rem;
+  font-weight: 900; }
+
+.section__description {
+  width: 35rem;
+  margin: 5rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #7a7a7a; }
+
+.section__sponsors {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 6rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto; }
+  .section__sponsors--icon {
+    width: 15rem;
+    height: 6rem; }
+    .section__sponsors--icon:not(:last-child) {
+      margin-right: 2rem; }
+    .section__sponsors--icon ~ img {
+      display: inline-block; }
+
+.section__image-container {
+  height: 70rem; }
+
+.section__image--item {
+  height: 70rem; }
+
+.navigation {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0; }
+  .navigation__logo {
+    margin-right: 2rem;
+    padding: 1rem 2rem; }
+  .navigation__links {
+    display: flex; }
+    .navigation__links--container {
+      display: flex;
+      list-style-type: none; }
+    .navigation__links-item {
+      padding: 1rem 2rem;
+      color: #7a7a7a;
+      font-weight: 700; }
+  .navigation__user--container {
+    display: flex;
+    list-style-type: none;
+    color: #7a7a7a; }
+  .navigation__user-item {
+    padding: 1rem 2rem;
+    font-weight: 700; }
+    .navigation__user-item--login {
+      margin-right: 3rem; }
+    .navigation__user-item--register {
+      border: 1px solid #7a7a7a;
+      border-radius: 1rem; }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="sass/main.scss"> -->
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header class="navigation">
+    <nav class="navigation__links">
+      <nav class="navigation__logo">
+        <img src="images/logo.svg" alt="">
+      </nav>
+      <ul class="navigation__links--container">
+        <li class="navigation__links-item">Features </li>
+        <li class="navigation__links-item">Company</li>
+        <li class="navigation__links-item">Careers</li>
+        <li class="navigation__links-item">About</li>
+      </ul>
+    </nav>
+    <nav class="navigation__user">
+      <ul class="navigation__user--container">
+        <li class="navigation__user-item navigation__user-item--login">Login</li>
+        <li class="navigation__user-item navigation__user-item--register">Register</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section__container">
+    <div class="section__introduction">
+      <h1 class="section__header">Make remote work</h1>
+      <p class="section__description">
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.
+      </p>
+      <button class="section__btn">Learn more</button>
+      <div class="section__sponsors">
+        <img src="images/client-databiz.svg" alt="">
+
+        <img src="images/client-audiophile.svg" alt="">
+
+        <img src="images/client-meet.svg" alt="">
+
+        <img src="images/client-maker.svg" alt="">
+      </div>
+    </div>
+
+    <div class="section__image-container">
+      <img class="section__image--item" src="images/image-hero-desktop.png" alt="Image Hero Desktop">
+    </div>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.oyefuleoluwatayo.netlify.app">Oyefule Oluwatayo</a>.
+  </div>
+</body>
+</html>

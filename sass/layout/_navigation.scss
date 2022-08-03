@@ -1,0 +1,50 @@
+.navigation {
+   height: 6rem;
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem 0;
+
+
+   &__logo {
+      margin-right: 2rem;
+      padding: 1rem 2rem;
+   }
+
+   &__links {
+      display: flex;
+
+      &--container {
+         display: flex;
+         list-style-type: none;
+      }
+
+      &-item {
+         padding: 1rem 2rem;
+         color: $color-grey;
+         font-weight: 700;
+      }
+   }
+
+   &__user {
+
+      &--container {
+         display: flex;
+         list-style-type: none;
+         color: $color-grey;
+      }
+
+      &-item {
+         padding: 1rem 2rem;
+         font-weight: 700;
+
+         &--login {
+            margin-right: 3rem;
+         }
+
+         &--register {
+            border: 1px solid $color-grey;
+            border-radius: 1rem;
+         }
+      }
+   }
+}

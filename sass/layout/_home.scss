@@ -1,0 +1,64 @@
+.section {
+   &__container {
+      padding: 10rem;
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 10rem;
+      justify-content: center;
+   }
+
+   &__introduction {
+      margin-top: 10rem;
+      position: relative;
+      padding: 0 5rem;
+   }
+
+   &__header {
+      margin: 5rem 0;
+      line-height: 7rem;
+      width: 85%;
+      font-family: 'Roboto', sans-serif;
+      font-size: 8rem;
+      font-weight: 900;
+   }
+
+   &__description {
+      width: 35rem;
+      margin: 5rem 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $color-grey;
+   }
+
+   &__sponsors {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      height: 6rem;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+
+      &--icon {
+         width: 15rem;
+         height: 6rem;
+         
+         &:not(:last-child) {
+            margin-right: 2rem;
+         }
+
+         & ~ img {
+            display: inline-block;
+         }
+      }
+   }
+
+   &__image {
+      &-container {
+         height: 70rem;
+      }
+
+      &--item {
+         height: 70rem;
+      }
+   }
+}
