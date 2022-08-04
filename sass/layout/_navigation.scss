@@ -3,6 +3,7 @@
    display: flex;
    justify-content: space-between;
    padding: 1rem 0;
+   cursor: pointer;
 
 
    &__logo {
@@ -20,8 +21,17 @@
 
       &-item {
          padding: 1rem 2rem;
-         color: $color-grey;
+         color: $color-mid-gray;
          font-weight: 700;
+         transition: all .8s;
+
+         &:hover {
+            color: $color-typography;
+         }
+   
+         &--icon {
+            margin-left: .5rem;
+         }
       }
    }
 
@@ -30,7 +40,7 @@
       &--container {
          display: flex;
          list-style-type: none;
-         color: $color-grey;
+         color: $color-mid-gray;
       }
 
       &-item {
@@ -42,7 +52,7 @@
          }
 
          &--register {
-            border: 1px solid $color-grey;
+            border: 1px solid $color-mid-gray;
             border-radius: 1rem;
          }
       }

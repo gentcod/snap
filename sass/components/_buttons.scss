@@ -1,9 +1,46 @@
 .section__btn {
-   padding: 1rem 2rem;
+   height: 4.5rem;
+   width: 15rem;
    border-radius: 1rem;
    font-size: 1.4rem;
-   background-color: $color-black;
-   color: $color-white;
+   background-color: $color-black-2;
+   color: $color-white-2;
    border: 0;
    font-weight: 700;
+   cursor: pointer;
+
+   &:hover {
+      background-color: $color-white-2;
+      color: $color-black-2;
+      border: 1px solid $color-black-2;
+   }
+
+   &-container {
+      position: relative;
+   }
+
+   //Button animation
+   &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 15rem;
+      border-radius: 1rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: $color-black-2;
+      transition: all .5s;
+   }
+
+   &--animated{
+      animation: moveInBottom 1s ease-in .75s;
+      animation-fill-mode: backwards;
+  }
+
+   &:hover::after {
+      transform: scale(1.2);
+      opacity: 0;
+   }
 }

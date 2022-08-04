@@ -1,6 +1,6 @@
 .section {
    &__container {
-      padding: 10rem;
+      padding: 5rem 10rem;
       display: grid;
       grid-template-columns: auto auto;
       column-gap: 10rem;
@@ -8,9 +8,20 @@
    }
 
    &__introduction {
-      margin-top: 10rem;
+      margin-top: 8rem;
       position: relative;
       padding: 0 5rem;
+      height: 60rem;
+   }
+
+   &__image {
+      &-container {
+         height: 60rem;
+      }
+
+      &--item {
+         height: 60rem;
+      }
    }
 
    &__header {
@@ -26,14 +37,14 @@
       width: 35rem;
       margin: 5rem 0;
       font-size: 1.6rem;
-      font-weight: 700;
-      color: $color-grey;
+      font-weight: 500;
+      color: $color-mid-gray;
    }
 
    &__sponsors {
       width: 100%;
       position: absolute;
-      bottom: 0;
+      bottom: 5rem;
       height: 6rem;
       display: grid;
       grid-template-columns: auto auto auto auto;
@@ -49,16 +60,6 @@
          & ~ img {
             display: inline-block;
          }
-      }
-   }
-
-   &__image {
-      &-container {
-         height: 70rem;
-      }
-
-      &--item {
-         height: 70rem;
       }
    }
 }

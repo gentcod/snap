@@ -25,8 +25,23 @@
         <img src="images/logo.svg" alt="">
       </nav>
       <ul class="navigation__links--container">
-        <li class="navigation__links-item">Features </li>
-        <li class="navigation__links-item">Company</li>
+        <li class="navigation__links-item">Features 
+          <img src="images/icon-arrow-down.svg" alt="Arrow down" class="navigation__links-item--icon">
+          <ul class="navigation__links-dropdown">
+            <li class="navigation__links-dropdown-item"><img src="images/icon-todo.svg" alt="Todo list icon" class="navigation__links-dropdown-icon"> Todo List</li>
+            <li class="navigation__links-dropdown-item"><img src="images/icon-calendar.svg" alt="Calendar icon" class="navigation__links-dropdown-icon">Calendar</li>
+            <li class="navigation__links-dropdown-item"><img src="images/icon-reminders.svg" alt="Reminders icon" class="navigation__links-dropdown-icon">Reminders</li>
+            <li class="navigation__links-dropdown-item"><img src="images/icon-planning.svg" alt="Planning icon" class="navigation__links-dropdown-icon">Planning</li>
+          </ul>
+        </li>
+        <li class="navigation__links-item">Company 
+          <img src="images/icon-arrow-down.svg" alt="Arrow down" class="navigation__links-item--icon">
+          <ul class="navigation__links-dropdown">
+            <li class="navigation__links-dropdown-item">History</li>
+            <li class="navigation__links-dropdown-item">Our Team</li>
+            <li class="navigation__links-dropdown-item">Blog</li>
+          </ul>
+        </li>
         <li class="navigation__links-item">Careers</li>
         <li class="navigation__links-item">About</li>
       </ul>
@@ -46,7 +61,9 @@
         Get your team in sync, no matter your location. Streamline processes, 
         create team rituals, and watch productivity soar.
       </p>
-      <button class="section__btn">Learn more</button>
+      <div class="section__btn-container">
+        <button class="section__btn section__btn--animated">Learn more</button>
+      </div>
       <div class="section__sponsors">
         <img src="images/client-databiz.svg" alt="">
 
