@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="sass/main.scss"> -->
+  <script src="js/app.js" defer></script>
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
@@ -25,18 +26,18 @@
         <img src="images/logo.svg" alt="">
       </nav>
       <ul class="navigation__links--container">
-        <li class="navigation__links-item">Features 
+        <li class="navigation__links-item dropdown" data-link="features">Features 
           <img src="images/icon-arrow-down.svg" alt="Arrow down" class="navigation__links-item--icon">
-          <ul class="navigation__links-dropdown">
+          <ul class="navigation__links-dropdown navigation__links-dropdown--features hidden">
             <li class="navigation__links-dropdown-item"><img src="images/icon-todo.svg" alt="Todo list icon" class="navigation__links-dropdown-icon"> Todo List</li>
             <li class="navigation__links-dropdown-item"><img src="images/icon-calendar.svg" alt="Calendar icon" class="navigation__links-dropdown-icon">Calendar</li>
             <li class="navigation__links-dropdown-item"><img src="images/icon-reminders.svg" alt="Reminders icon" class="navigation__links-dropdown-icon">Reminders</li>
             <li class="navigation__links-dropdown-item"><img src="images/icon-planning.svg" alt="Planning icon" class="navigation__links-dropdown-icon">Planning</li>
           </ul>
         </li>
-        <li class="navigation__links-item">Company 
+        <li class="navigation__links-item dropdown" data-link="company">Company 
           <img src="images/icon-arrow-down.svg" alt="Arrow down" class="navigation__links-item--icon">
-          <ul class="navigation__links-dropdown">
+          <ul class="navigation__links-dropdown navigation__links-dropdown--company hidden">
             <li class="navigation__links-dropdown-item">History</li>
             <li class="navigation__links-dropdown-item">Our Team</li>
             <li class="navigation__links-dropdown-item">Blog</li>

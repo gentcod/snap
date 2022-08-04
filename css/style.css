@@ -74,6 +74,13 @@ body {
     transform: scale(1.2);
     opacity: 0; }
 
+.hidden {
+  display: none;
+  transform: translateY(-5rem); }
+
+.active {
+  display: visible; }
+
 .navigation__links-dropdown {
   list-style-type: none;
   background-color: #fff;
@@ -82,9 +89,17 @@ body {
   border-radius: 1rem;
   box-shadow: 0.6rem 0.6rem 1rem rgba(0, 0, 0, 0.1), -0.6rem -0.6rem 1rem rgba(105, 105, 105, 0.1);
   margin-top: 2rem;
-  font-weight: 400; }
+  font-weight: 400;
+  position: absolute;
+  transform: translateX(-5rem);
+  display: visible;
+  transition: all 2s; }
+  .navigation__links-dropdown--company {
+    transform: translateX(0); }
   .navigation__links-dropdown-item {
     padding: .5rem; }
+    .navigation__links-dropdown-item:hover {
+      color: #222; }
   .navigation__links-dropdown-icon {
     margin-right: 1rem; }
 
@@ -169,6 +184,12 @@ body {
     font-weight: 700; }
     .navigation__user-item--login {
       margin-right: 3rem; }
+      .navigation__user-item--login:hover {
+        color: #141414; }
     .navigation__user-item--register {
       border: 1px solid #696969;
-      border-radius: 1rem; }
+      border-radius: 1rem;
+      transition: all .5s; }
+      .navigation__user-item--register:hover {
+        background-color: #141414;
+        color: #fafafa; }

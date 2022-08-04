@@ -49,11 +49,21 @@
 
          &--login {
             margin-right: 3rem;
+
+            &:hover {
+               color: $color-black-2;
+            }
          }
 
          &--register {
             border: 1px solid $color-mid-gray;
             border-radius: 1rem;
+            transition: all .5s;
+
+            &:hover {
+               background-color: $color-black-2;
+               color: $color-white-2;
+            }
          }
       }
    }
