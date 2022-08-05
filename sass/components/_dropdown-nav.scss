@@ -4,7 +4,7 @@
    color: $color-mid-gray;
    padding: 1.5rem;
    border-radius: 1rem;
-   box-shadow: .6rem .6rem 1rem rgba($color-black, .1), -.6rem -.6rem 1rem rgba($color-mid-gray, .1);
+   box-shadow: .6rem .6rem 1rem rgba($color-mid-gray, .1), -.6rem -.6rem 1rem rgba($color-mid-gray, .1);
    margin-top: 2rem;
    font-weight: 400;
    position: absolute;
@@ -22,6 +22,7 @@
       
       &:hover {
          color: $color-typography;
+         font-weight: 600;
       }
    }
 

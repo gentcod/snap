@@ -5,22 +5,58 @@
       grid-template-columns: auto auto;
       column-gap: 10rem;
       justify-content: center;
+      margin-bottom: 5rem;
+
+      @include respond(tab-port) {
+         grid-template-columns: auto;
+         column-gap: 0;
+         padding: 5rem 2rem;
+      }
+
+      @include respond(phone) {
+         padding: 2rem;
+      }
    }
 
    &__introduction {
       margin-top: 8rem;
-      position: relative;
       padding: 0 5rem;
-      height: 60rem;
+      max-height: 60rem;
+      position: relative;
+      text-align: center;
+
+      @include respond(tab-port) {
+         width: 100%;
+         padding: 0;
+      }
+
+      @include respond(phone) {
+         margin-top: 2rem;
+      }
    }
 
    &__image {
       &-container {
-         height: 60rem;
+         max-height: 60rem;
+         margin: 0 auto;
+
+         @include respond(tab-port) {
+            grid-row: 1;
+            max-width: 100%;
+         }
       }
 
       &--item {
-         height: 60rem;
+         max-height: 60rem;
+
+         @include respond(tab-port) {
+            width: 90vw;
+         }
+         
+         @include respond(phone) {
+            width: 100vw;
+            max-height: 40vh;
+         }
       }
    }
 
@@ -31,14 +67,38 @@
       font-family: 'Roboto', sans-serif;
       font-size: 8rem;
       font-weight: 900;
+
+      @include respond(tab-port) {
+         margin: 5rem 0;
+         width: 100%;
+      }
+      
+      @include respond(phone) {
+         font-size: 4rem;
+         margin: 2rem 0;
+         line-height: 4rem;
+      }
    }
 
    &__description {
-      width: 35rem;
+      max-width: 35rem;
       margin: 5rem 0;
       font-size: 1.6rem;
       font-weight: 500;
       color: $color-mid-gray;
+
+      @include respond(tab-port) {
+         max-width: 80%;
+         font-size: 2rem;
+         font-weight: 600;
+         margin: 0 auto;
+         margin-bottom: 3rem;
+      }
+      
+      @include respond(phone) {
+         max-width: 100%;
+         margin: 3rem 0;
+      }
    }
 
    &__sponsors {
@@ -49,16 +109,25 @@
       display: grid;
       grid-template-columns: auto auto auto auto;
 
-      &--icon {
-         width: 15rem;
-         height: 6rem;
-         
-         &:not(:last-child) {
-            margin-right: 2rem;
-         }
+      @include respond(tab-port) {
+         position: relative;
+         margin-top: 10rem;
+      }
 
-         & ~ img {
-            display: inline-block;
+         
+      &:not(:last-child) {
+         margin-right: 2rem;
+      }
+
+      & > img {
+         max-width: 15rem;
+         max-height: 6rem;
+         display: inline-block;
+         margin: 0 auto;
+
+
+         @include respond(phone) {
+            max-width: 8rem;
          }
       }
    }

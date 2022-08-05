@@ -21,13 +21,13 @@
 <body>
 
   <header class="navigation">
+    <nav class="navigation__logo">
+      <img src="images/logo.svg" alt="">
+    </nav>
     <nav class="navigation__links">
-      <nav class="navigation__logo">
-        <img src="images/logo.svg" alt="">
-      </nav>
       <ul class="navigation__links--container">
         <li class="navigation__links-item dropdown" data-link="features">Features 
-          <img src="images/icon-arrow-down.svg" alt="Arrow down" class="navigation__links-item--icon">
+          <img src="images/icon-arrow-down.svg" alt="Arrow down" class="navigation__links-item--icon icon-feature">
           <ul class="navigation__links-dropdown navigation__links-dropdown--features hidden">
             <li class="navigation__links-dropdown-item"><img src="images/icon-todo.svg" alt="Todo list icon" class="navigation__links-dropdown-icon"> Todo List</li>
             <li class="navigation__links-dropdown-item"><img src="images/icon-calendar.svg" alt="Calendar icon" class="navigation__links-dropdown-icon">Calendar</li>
@@ -36,7 +36,7 @@
           </ul>
         </li>
         <li class="navigation__links-item dropdown" data-link="company">Company 
-          <img src="images/icon-arrow-down.svg" alt="Arrow down" class="navigation__links-item--icon">
+          <img src="images/icon-arrow-down.svg" alt="Arrow down" class="navigation__links-item--icon icon-company">
           <ul class="navigation__links-dropdown navigation__links-dropdown--company hidden">
             <li class="navigation__links-dropdown-item">History</li>
             <li class="navigation__links-dropdown-item">Our Team</li>
@@ -46,14 +46,20 @@
         <li class="navigation__links-item">Careers</li>
         <li class="navigation__links-item">About</li>
       </ul>
-    </nav>
-    <nav class="navigation__user">
-      <ul class="navigation__user--container">
-        <li class="navigation__user-item navigation__user-item--login">Login</li>
-        <li class="navigation__user-item navigation__user-item--register">Register</li>
-      </ul>
+
+      <nav class="navigation__user">
+        <ul class="navigation__user--container">
+          <li class="navigation__user-item navigation__user-item--login">Login</li>
+          <li class="navigation__user-item navigation__user-item--register">Register</li>
+        </ul>
+      </nav>
     </nav>
   </header>
+
+  <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="navigation__button">
+      <span class="navigation__icon"></span>
+    </label>
 
   <section class="section__container">
     <div class="section__introduction">
