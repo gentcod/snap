@@ -23,9 +23,9 @@
       padding: 0 5rem;
       max-height: 60rem;
       position: relative;
-      text-align: center;
-
+      
       @include respond(tab-port) {
+         text-align: center;
          width: 100%;
          padding: 0;
       }
@@ -63,7 +63,7 @@
    &__header {
       margin: 5rem 0;
       line-height: 7rem;
-      width: 85%;
+      width: 88%;
       font-family: 'Roboto', sans-serif;
       font-size: 8rem;
       font-weight: 900;
@@ -104,7 +104,8 @@
    &__sponsors {
       width: 100%;
       position: absolute;
-      bottom: 5rem;
+      bottom: 0;
+      left: 0;
       height: 6rem;
       display: grid;
       grid-template-columns: auto auto auto auto;
