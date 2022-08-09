@@ -90,11 +90,15 @@ body {
     opacity: 0; }
 
 .hidden {
-  display: none;
+  display: none !important;
   transform: translateY(-5rem); }
 
 .active {
   display: visible; }
+
+.hide {
+  transition: all 1s;
+  display: none !important; }
 
 .navigation__links-dropdown {
   list-style-type: none;
@@ -108,11 +112,25 @@ body {
   position: absolute;
   transform: translateX(-5rem);
   display: visible;
+  transition: all .8s;
   transition: all 2s; }
+  @media (max-width: 56.25em) {
+    .navigation__links-dropdown {
+      transform: translateX(0);
+      display: block;
+      width: 100%;
+      box-shadow: none;
+      z-index: 200;
+      position: relative;
+      margin-top: 0; } }
   .navigation__links-dropdown--company {
     transform: translateX(0); }
   .navigation__links-dropdown-item {
     padding: .5rem; }
+    @media (max-width: 56.25em) {
+      .navigation__links-dropdown-item {
+        z-index: 200;
+        padding: 1rem; } }
     .navigation__links-dropdown-item:hover {
       color: #222;
       font-weight: 600; }
@@ -280,6 +298,9 @@ body {
     font-weight: 700; }
     .navigation__user-item--login {
       margin-right: 3rem; }
+      @media (max-width: 56.25em) {
+        .navigation__user-item--login {
+          margin-right: 0; } }
       .navigation__user-item--login:hover {
         color: #141414; }
     .navigation__user-item--register {
@@ -299,7 +320,11 @@ body {
     right: 2.5rem;
     z-index: 300;
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    display: none; }
+    @media (max-width: 56.25em) {
+      .navigation__button {
+        display: inline-block; } }
   .navigation__checkbox {
     display: none; }
   .navigation__icon {
@@ -330,5 +355,5 @@ body {
   .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
     transform: rotate(-135deg);
     top: 0; }
-  .navigation__checcked:checked .navigation__links {
-    display: visible; }
+  .navigation__checkbox:checked [class*="__links"] {
+    display: none; }

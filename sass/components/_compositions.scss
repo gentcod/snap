@@ -1,5 +1,5 @@
 .hidden {
-   display: none;
+   display: none !important;
    transform: translateY(-5rem);
 }
 
@@ -7,7 +7,7 @@
    display: visible;
 }
 
-// .attribution {
-//    position: absolute;
-//    bottom: 0;
-// }
+.hide {
+   transition: all 1s;
+   display: none !important;
+}

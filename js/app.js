@@ -9,8 +9,7 @@ const iconCompany = document.querySelector('.icon-company');
 navigation.addEventListener('click', function(e) {
    e.preventDefault();
    const nav = e.target.closest('.dropdown');
-   // const navButton = e.target.closest('.nav')
-   
+
    //Guard clause
    if (!nav) return;
    const img = nav.querySelector('.navigation__links-item--icon');
@@ -39,6 +38,23 @@ navigation.addEventListener('click', function(e) {
    };
 })
 
+//Hide navigation
+const hideNavigation = function() {
+   if(window.screen <= 600) navigation.classList.add('hide');
+   navigation.classList.add('hide')
+}
+
+const init = window.addEventListener('load', hideNavigation)
+
+init();
+
+//Toggle navigation sidebar
+document.querySelector('.navigation__icon').addEventListener('click', ()=> {
+   console.log(navigation.classList);
+   navigation.classList.toggle('hide');
+   // navigation.style.display = 'none';
+})
+
 //Hide dropdown when other elements are clicked
 // document.querySelector('body').addEventListener('click', function(e) {
 //    e.preventDefault();
@@ -51,8 +67,4 @@ navigation.addEventListener('click', function(e) {
 //       iconCompany.src = 'images/icon-arrow-down.svg';
 //       iconFeature.src = 'images/icon-arrow-down.svg';
 //    }
-// })
-
-// document.querySelector('.navigation__icon').addEventListener('click', ()=> {
-//    navigation.style.display = 'hidden';
 // })

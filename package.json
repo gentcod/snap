@@ -2,7 +2,7 @@
   "name": "intro-section-with-dropdown-navigation-main",
   "version": "1.0.0",
   "description": "landing page intro section with dropdown navigation",
-  "main": "index.js",
+  "source": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile-sass": "node-sass sass/main.scss css/style.css -w",
@@ -12,6 +12,7 @@
   "author": "Oyefule Oluwatayo",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
     "node-sass": "^7.0.1",
     "parcel": "^2.6.2"
   }

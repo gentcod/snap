@@ -78,6 +78,10 @@
          &--login {
             margin-right: 3rem;
 
+            @include respond(tab-port) {
+               margin-right: 0;
+            }
+
             &:hover {
                color: $color-black-2;
             }
@@ -109,6 +113,11 @@
       z-index: 300;
       text-align: center;
       cursor: pointer;
+      display: none;
+
+      @include respond(tab-port) {
+         display: inline-block;
+      }
    }
 
    &__checkbox {
@@ -163,8 +172,8 @@
    }
 
    //Functionality
-   &__checcked:checked .navigation__links {
-      display: visible;
+   &__checkbox:checked [class*="__links"] {
+      display: none;
    }
 }
 
