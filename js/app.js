@@ -44,9 +44,7 @@ const hideNavigation = function() {
    navigation.classList.add('hide')
 }
 
-const init = window.addEventListener('load', hideNavigation)
-
-init();
+hideNavigation();
 
 //Toggle navigation sidebar
 document.querySelector('.navigation__icon').addEventListener('click', ()=> {
