@@ -1,12 +1,14 @@
 .section {
    &__container {
       width: 100%;
-      padding: 5rem 10rem;
+      padding: 5rem;
       display: grid;
       grid-template-columns: auto auto;
-      column-gap: 10rem;
-      justify-content: center;
+      column-gap: 5rem;
+      justify-content: space-evenly;
+      align-content: center;
       margin-bottom: 5rem;
+      position: relative;
 
       @include respond(tab-port) {
          grid-template-columns: auto;
@@ -20,8 +22,8 @@
    }
 
    &__introduction {
-      margin-top: 8rem;
-      padding: 0 5rem;
+      margin-top: 2rem;
+      padding: 2rem;
       max-height: 60rem;
       position: relative;
       
@@ -48,8 +50,6 @@
       }
 
       &--item {
-         max-height: 60rem;
-
          @include respond(tab-port) {
             width: 90vw;
          }
@@ -58,16 +58,21 @@
             width: 100vw;
             max-height: 40vh;
          }
+         max-height: 60rem;
+
       }
    }
 
    &__header {
       margin: 5rem 0;
       line-height: 7rem;
-      width: 88%;
       font-family: 'Roboto', sans-serif;
       font-size: 8rem;
       font-weight: 900;
+
+      @include respond(tab-land) {
+         font-size: 6rem;
+      }
 
       @include respond(tab-port) {
          margin: 5rem 0;
@@ -98,13 +103,13 @@
    }
 
    &__sponsors {
-      width: 100%;
+      margin: 5rem 0;
       position: absolute;
       bottom: 0;
       height: 5rem;
       display: grid;
       grid-template-columns: auto auto auto auto;
-      column-gap: 3rem;
+      column-gap: 5rem;
 
       & > img {
          max-width: 8rem;
@@ -113,17 +118,10 @@
 
       @include respond(tab-port) {
          position: relative;
-         margin-top: 10rem;
          column-gap: 0;
       }
-
-         
-      &:not(:last-child) {
-         margin-right: 2rem;
-      }
-
       &-icon {
-         max-width: 15rem;
+         max-width: 10rem;
          max-height: 6rem;
          display: flex;
          align-items: center;
