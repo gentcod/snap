@@ -31,6 +31,8 @@
 
    &-item {
       padding: .5rem;
+      display: flex;
+      align-items: center;
 
       @include respond(tab-port) {
          z-index: 200;

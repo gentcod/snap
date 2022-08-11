@@ -5,6 +5,8 @@ const dropdownCompany = document.querySelector('.navigation__links-dropdown--com
 const iconFeature = document.querySelector('.icon-feature');
 const iconCompany = document.querySelector('.icon-company');
 
+// import icons from 'url:../../images/icon-arrow-down.svg';
+
 //Dropdown menu
 navigation.addEventListener('click', function(e) {
    e.preventDefault();
@@ -13,6 +15,8 @@ navigation.addEventListener('click', function(e) {
    //Guard clause
    if (!nav) return;
    const img = nav.querySelector('.navigation__links-item--icon');
+   const imageSrc = iconCompany.src.slice(0, iconCompany.src.lastIndexOf('/'))
+   // console.log(imageSrc)
    
    //Specific navigation selected
    const navSpec = nav.dataset.link;
@@ -20,37 +24,40 @@ navigation.addEventListener('click', function(e) {
    //Helper function
    //Change dropdown parent icon
    const hidden = function(nav) {
-      img.src = nav.classList.contains('hidden') ? 'images/icon-arrow-down.svg' : 'images/icon-arrow-up.svg';
+      img.src = nav.classList.contains('hidden') ? `${imageSrc}/icon-arrow-down.svg` : `${imageSrc}/icon-arrow-up.svg`;
    }
 
    if (navSpec === 'features') {
       dropdownFeatures.classList.toggle('hidden');
       hidden(dropdownFeatures);
       dropdownCompany.classList.add('hidden');
-      iconCompany.src = 'images/icon-arrow-down.svg';
+      iconCompany.src = `${imageSrc}/icon-arrow-down.svg`;
    };
 
    if (navSpec === 'company') {
       dropdownCompany.classList.toggle('hidden');
       hidden(dropdownCompany);
       dropdownFeatures.classList.add('hidden');
-      iconFeature.src = 'images/icon-arrow-down.svg';
+      iconFeature.src = `${imageSrc}/icon-arrow-down.svg`;
    };
 })
 
 //Hide navigation
-const hideNavigation = function() {
-   if(window.screen <= 600) navigation.classList.add('hide');
-   navigation.classList.add('hide')
-}
+// const hideNavigation = function() {
+//    if(!(window.screen.width <= 600)) return;
+//    navigation.classList.add('hide');
+// }
 
-hideNavigation();
+// hideNavigation();
+window.addEventListener('load', function() {
+   if(!(window.screen.width <= 600)) return;
+   navigation.classList.add('hide')
+})
 
 //Toggle navigation sidebar
-document.querySelector('.navigation__icon').addEventListener('click', ()=> {
-   console.log(navigation.classList);
+document.querySelector('.navigation__icon').addEventListener('click', function(e) {
+   if (!e.target) return;
    navigation.classList.toggle('hide');
-   // navigation.style.display = 'none';
 })
 
 //Hide dropdown when other elements are clicked

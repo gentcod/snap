@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link rel="stylesheet" href="sass/main.scss">
-  <script src="js/app.js" defer></script>
+  <script type="module" src="js/app.js"></script>
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
@@ -29,10 +29,38 @@
         <li class="navigation__links-item dropdown" data-link="features">Features 
           <img src="images/icon-arrow-down.svg" alt="Arrow down" class="navigation__links-item--icon icon-feature">
           <ul class="navigation__links-dropdown navigation__links-dropdown--features hidden">
-            <li class="navigation__links-dropdown-item"><img src="images/icon-todo.svg" alt="Todo list icon" class="navigation__links-dropdown-icon"> Todo List</li>
+            <li class="navigation__links-dropdown-item">
+              <svg style="width: 20px; height: 20px">
+                <image xlink:href="images/icon-todo.svg"></image>
+              </svg>
+               Todo List
+            </li>
+
+            <li class="navigation__links-dropdown-item">
+              <svg style="width: 20px; height: 20px">
+                <image xlink:href="images/icon-calendar.svg"></image>
+              </svg>
+                Calendar
+            </li>
+
+            <li class="navigation__links-dropdown-item">
+              <svg style="width: 20px; height: 20px">
+                <image xlink:href="images/icon-reminders.svg"></image>
+              </svg>
+               Reminders
+            </li>
+
+            <li class="navigation__links-dropdown-item">
+              <svg style="width: 20px; height: 20px">
+                <image xlink:href="images/icon-planning.svg"></image>
+              </svg>
+               Planning
+            </li>
+            
+            <!-- <li class="navigation__links-dropdown-item"><img src="images/icon-todo.svg" alt="Calendar icon" class="navigation__links-dropdown-icon">Todo List</li>
             <li class="navigation__links-dropdown-item"><img src="images/icon-calendar.svg" alt="Calendar icon" class="navigation__links-dropdown-icon">Calendar</li>
             <li class="navigation__links-dropdown-item"><img src="images/icon-reminders.svg" alt="Reminders icon" class="navigation__links-dropdown-icon">Reminders</li>
-            <li class="navigation__links-dropdown-item"><img src="images/icon-planning.svg" alt="Planning icon" class="navigation__links-dropdown-icon">Planning</li>
+            <li class="navigation__links-dropdown-item"><img src="images/icon-planning.svg" alt="Planning icon" class="navigation__links-dropdown-icon">Planning</li> -->
           </ul>
         </li>
         <li class="navigation__links-item dropdown" data-link="company">Company 
@@ -72,6 +100,7 @@
         <button class="section__btn section__btn--animated">Learn more</button>
       </div>
       <div class="section__sponsors">
+
         <img src="images/client-databiz.svg" alt="">
 
         <img src="images/client-audiophile.svg" alt="">

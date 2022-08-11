@@ -1,5 +1,6 @@
 .section {
    &__container {
+      width: 100%;
       padding: 5rem 10rem;
       display: grid;
       grid-template-columns: auto auto;
@@ -94,25 +95,26 @@
          margin: 0 auto;
          margin-bottom: 3rem;
       }
-      
-      @include respond(phone) {
-         max-width: 100%;
-         margin: 3rem 0;
-      }
    }
 
    &__sponsors {
       width: 100%;
       position: absolute;
       bottom: 0;
-      left: 0;
-      height: 6rem;
+      height: 5rem;
       display: grid;
       grid-template-columns: auto auto auto auto;
+      column-gap: 3rem;
+
+      & > img {
+         max-width: 8rem;
+         margin: 0 auto;
+      }
 
       @include respond(tab-port) {
          position: relative;
          margin-top: 10rem;
+         column-gap: 0;
       }
 
          
@@ -120,10 +122,11 @@
          margin-right: 2rem;
       }
 
-      & > img {
+      &-icon {
          max-width: 15rem;
          max-height: 6rem;
-         display: inline-block;
+         display: flex;
+         align-items: center;
          margin: 0 auto;
 
 
