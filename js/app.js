@@ -14,31 +14,36 @@ navigation.addEventListener('click', function(e) {
 
    //Guard clause
    if (!nav) return;
-   const img = nav.querySelector('.navigation__links-item--icon');
-   const imageSrc = iconCompany.src.slice(0, iconCompany.src.lastIndexOf('/'))
+   // const icon = nav.querySelector('.navigation__links-item--icon');
+   // const imageSrc = iconCompany.src.slice(0, iconCompany.src.lastIndexOf('/'))
    // console.log(imageSrc)
+
+   const iconDown = nav.querySelector('.icon-down');
+   const iconUp = nav.querySelector('.icon-up')
    
    //Specific navigation selected
    const navSpec = nav.dataset.link;
 
    //Helper function
    //Change dropdown parent icon
-   const hidden = function(nav) {
-      img.src = nav.classList.contains('hidden') ? `${imageSrc}/icon-arrow-down.svg` : `${imageSrc}/icon-arrow-up.svg`;
+   const hide = function(nav) {
+      // icon.src = nav.classList.contains('hidden') ? `${imageSrc}/icon-arrow-down.svg` : `${imageSrc}/icon-arrow-up.svg`;
+      iconDown.classList.toggle('hide')
+      iconUp.classList.toggle('hide')
    }
 
    if (navSpec === 'features') {
       dropdownFeatures.classList.toggle('hidden');
-      hidden(dropdownFeatures);
+      hide(dropdownFeatures);
       dropdownCompany.classList.add('hidden');
-      iconCompany.src = `${imageSrc}/icon-arrow-down.svg`;
+      // iconCompany.src = `${imageSrc}/icon-arrow-down.svg`;
    };
 
    if (navSpec === 'company') {
       dropdownCompany.classList.toggle('hidden');
-      hidden(dropdownCompany);
+      hide(dropdownCompany);
       dropdownFeatures.classList.add('hidden');
-      iconFeature.src = `${imageSrc}/icon-arrow-down.svg`;
+      // iconFeature.src = `${imageSrc}/icon-arrow-down.svg`;
    };
 })
 
